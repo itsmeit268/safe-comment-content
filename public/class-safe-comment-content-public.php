@@ -41,7 +41,7 @@ class Safe_Comment_Content_Public {
 		$settings = get_option('scc_settings');
 		$moderation_keys = $settings['scc_moderation'];
 //		$moderation_keys = get_option('moderation_keys');
-		if (!$moderation_keys ) {
+		if (!$moderation_keys || $manager ) {
 			return $commentdata;
 		}
 
